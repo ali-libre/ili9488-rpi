@@ -3,6 +3,9 @@ this repo made for ili9488 that didn't support by fbtft(notro) up now.
 ways you can run ili9488
 ili9488:
 you have tow way:
+ 1) work on all rasp-pi but slow
+ 2) work only on rpi B+(i dont test another) but faster .you can't see any lag
+ at all you can't play a video????!!!@#$%
     1)install wheezy debian and using cpu driving lcd (this work on rpi1~3 ):
     
     
@@ -44,10 +47,16 @@ you have tow way:
         
         downloading manual, image, kernel... from this page:
             https://www.elecrow.com/395-inch-tft-display-for-raspberry-pi-p-1414.html #*(wget can download from dropbox)
-            
+            image are big(3.6Gbyte) and dropbox dont support multi connection
+            i uploaded compressed version of image to mediafire that support resume and accelerator
+            you can download it using axel:)
+            http://www.mediafire.com/file/1ex300s0qa41qbr/img%28win32_3.95screem%29.tar.gz
         write image and then replace kernel on the boot partition
         
 testing video:
     mplayer -vo fbdev2:/dev/fb1 -vf scale=320:-3 BigBuckBunny_320x180.mp4
+  or just:
+    startx /usr/bin/mplayer video-file
     
 this page of notro have good detail to fb:https://github.com/watterott/RPi-Display/blob/master/docu/FBTFT-Install.md
+but no supprt to ili9488
